@@ -1,51 +1,91 @@
+/*-----------------------------------
+    ENLEVER LES MISE EN FORME DE BASE
+-------------------------------------*/
 *{
     margin:0;
     padding:0;
     text-decoration: none;
     list-style: none;
 }
+/*---------------------------------------
+        BODY
+-----------------------------------------*/
 body{
     background-color: ivory;
 }
+/*----------------------------------------
+        DIV PAGE
+        div principale
+---------------------------------------*/
 .page{
     width:80%;
     margin:0 auto;
     text-align:center;
 }
-
+/*---------------------------------------
+        TITRE DE LA PAGE
+-----------------------------------------*/
 h1{
     font-size:4em;
     color:#0d80e3;
     margin-top:10px;
     margin-bottom:30px;
 }
-.liste{
-    width: 100%;
-}
 
+/*-------------------------------------------
+        ZONE DE FORMULAIRE
+--------------------------------------------*/
 .form{
-    font-size:2em;
+    display:flex;
+    flex-direction:row;
+    align-items: stretch;
     margin-bottom:30px;
 }
-.form input{
+.form label{
+    flex:auto;
+    font-size:2em;
+    margin:auto;
+}
+#ajoutTache{
+    flex:auto;
     height:2em;
     border:2px solid blue;
     border-radius: 10px;
-    width:40%;
-    font-size:1em;
+    font-size:2em;
+    margin:auto;
+}
+#ajoutDate{
+    flex:auto;
+    height:2em;
+    border:2px solid blue;
+    border-radius: 10px;
+    font-size:2em;
+    margin:auto;
 }
 .form button{
+    flex:auto;
     border:2px solid blue;
     border-radius: 10px;
-    font-size:1em;
     height:2em;
     margin-left:10px;
-    width:15%;
     background-color:blue;
     color:#ffffff;
     cursor:pointer;
+    font-size:2em;
+    margin:5 auto;
 }
 
+/*-----------------------------------------
+        DIV LISTE
+    DIV contenant toutes les div tache
+-------------------------------------------*/
+.liste{
+    width: 100%;
+}
+/*---------------------------------------
+        DIV TACHE
+        cette div contient une tache
+-------------------------------------*/
 .tache{
     display: flex;
     flex-direction:row;
@@ -58,25 +98,38 @@ h1{
     margin-top:5px;
     margin-bottom:5px;
 }
+.tache:hover{
+    background-color:midnightblue;
+}
+.tacheDate{
+    flex:auto;
+    font-size:1.5em;
+}
+.tacheDeadLine{
+    flex:auto;
+    font-size:1.5em;
+}
 .tacheTitre{
-    width:75%;
+    width:60%;
     font-size:1.5em;
 }
 .tacheCoche{
-    width:10%;
+    flex:auto;
     font-size:2em;
     cursor: pointer;
 }
 .tacheSupprimer{
-    width:10%;
+    flex:auto;
     font-size:2em;
     cursor: pointer;
 }
-
 .tacheTitre{
     align-self:center;
 }
 
+/*----------------------------------
+        FIV FOOTER
+-----------------------------------*/
 .footer{
     background-color: lightslategray;
     border-radius:20px;
